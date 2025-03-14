@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horse Man: A Day in the Life</title>
+    <link rel="stylesheet" href="styles/mainstyle.css">
+</head>
+
+<body>
+    <!-- Sticky Navigation Menu -->
+    <nav class="navbar">
+        <a href="index.html" class="logo">HM</a>
+        <div class="nav-links" id="navLinks">
+            <a href="index.html">Home</a>
+            <a href="#form">Form</a>
+            <a href="#psquare">Punnett Square</a>
+            <a href="aboutme.html">About Me</a>
+        </div>
+        <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
+    </nav>
+
+    <header>
+        <h1>Horse Man: A Day in the Life</h1>
+    </header>
+
+    <section>
+        <h2>6AM: Coffee</h2>
+        <p>Horse Man is a bit of a coffee snob. He will only drink a dark roast with premium oat milk. No exceptions.
+        </p>
+        <div class="image-container">
+            <img src="images/coffee.jpg" alt="coffee cup" >
+            <div class="overlay">Yay coffee!</div>
+        </div>
+    </section>
+
+    <section>
+        <h2>6:15AM: Run Around</h2>
+        <img src="images/running.jpg" alt="horse running">
+        <p>The best way to relax and not think about Punnett squares is to frolick through a field.</p>
+    </section>
+
+    <section>
+        <h2>9AM: Teach Class at Centaurus Middle School</h2>
+        <div class="flexy">
+            <img src="images/horsehead.jpg" alt="horse head" width="250" height="250">
+            <img src="images/whiteboard.jpg" alt="whiteboard with drawings" width="500" height="250">
+            <img src="images/p.air.jpg" alt="paper airplane" width="250" height="250">
+        </div>
+        <p>Yes, He is technically 50% human, yes he knows nobody can tell, no, paper airplanes are not permitted.</p>
+    </section>
+
+    <section>
+        <h2>4PM: Say 'Hay' to Others in the Teacher Lounge</h2>
+        <img src="images/oats.jpg" alt="oats">
+        <h3>Also Grab Some Overnight Oats for Lunch</h3>
+    </section>
+
+
+    <section>
+        <h2 id="psquare">6PM: Think About Punnett Squares</h2>
+        <div class="container">
+            <div class="img1"><img src="images/sadface.jpg" alt="sad face" width="200" height="200"></div>
+            <div class="img2"><img src="images/sadhorse.jpg" alt="a really sad horse"></div>
+            <div class="img3"> <img src="images/square.jpg" alt="punett square of if 2 centaurs had a baby"></div>
+        </div>
+    </section>
+
+
+    <section>
+        <button type="button" onclick="alert('Haha gotcha!')">For Daily Horse Man Updates, Click Here!</button>
+        <h2>Just kidding, fill out this form instead!</h2>
+
+        <form action="/formfinish.html" target="blank" id="form">
+            <label for="fname">First name:</label><br>
+            <input type="text" id="fname" name="firstname" placeholder="Firstneighm..."><br>
+            <label for="lname">Last name:</label><br>
+            <input type="text" id="lname" name="lastname" placeholder="Lastneighm..."><br><br>
+            <input type="submit" value="Submit">
+        </form>
+
+    </section>
+
+    <footer>© 2025 Horse Man | All Rights Reserved | images are created by author</footer>
+</body>
+
+</html>
