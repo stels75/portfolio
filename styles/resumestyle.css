@@ -24,7 +24,7 @@ body::before {
 body {
     line-height: 1.6;
     color: #e7d000;
-    background: url('/images/HORSEbg.jpg') center center fixed;
+    background: url('../images/HORSEbg.jpg') center center fixed;
     background-size: cover;
     padding: 40px 20px;
     min-height: 100vh;
