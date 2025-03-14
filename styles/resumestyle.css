@@ -1,0 +1,235 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier', monospace;
+    font-variant: small-caps;
+}
+
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(12, 69, 3, 0.5);
+    z-index: -1;
+}
+
+
+body {
+    line-height: 1.6;
+    color: #e7d000;
+    background: url('/images/HORSEbg.jpg') center center fixed;
+    background-size: cover;
+    padding: 40px 20px;
+    min-height: 100vh;
+    position: relative;
+}
+
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+
+header {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 30px;
+    background: rgb(35, 102, 4);
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(12, 69, 3, 0.5);
+}
+
+
+header h1 {
+    font-size: 2.5em;
+    color: #e7d000;
+    margin-bottom: 10px;
+}
+
+
+header p {
+    font-size: 1.1em;
+    color: #ffdd00;
+}
+
+
+section {
+    flex: 1 1 calc(50% - 20px);
+    margin-bottom: 20px;
+    padding: 25px;
+    border-radius: 15px;
+    background: rgb(35, 102, 4);
+    box-shadow: 0 4px 15px rgba(12, 69, 3, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(12, 69, 3, 0.5);
+}
+
+
+section h2 {
+    font-size: 1.5em;
+    color: #e7d000;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #e7d000;
+    padding-bottom: 8px;
+}
+
+
+section h3 {
+    font-size: 1.2em;
+    color: #e7d000;
+    margin-bottom: 8px;
+}
+
+
+section p, section li {
+    font-size: 1em;
+    color: #ffdd00;
+    line-height: 1.6;
+}
+
+
+/*makes list square and neat*/
+ul {
+    list-style: square;
+    padding-left: 20px;
+    margin-bottom: 15px;
+}
+
+
+footer {
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+    padding: 20px;
+    background: rgb(35, 102, 4);
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(12, 69, 3, 0.5);
+}
+
+/*makes the text link green*/
+.contact-link {
+    color: #77ff00;
+}
+
+/*makes the text and image links dark when hover*/
+.contact-link:hover {
+    opacity: 0.8;
+}
+
+/*makes images the right shape and in the right place*/
+.contact-icon {
+    vertical-align: middle;
+    margin-right: 4px;
+    margin-bottom: 4px;
+    width: 30px;
+    height: 30px;
+    border-radius: 10px;
+}
+
+/* navbar styles */
+.navbar {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1rem;
+    font-size: 1.5em;
+    color: #007b00;
+    background-color: rgba(68, 185, 0, 0.9);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    border-radius: 30px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: #007b00;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: darkgreen;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #007b00;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #333;
+}
+
+
+/*makes small screen look better*/
+@media (max-width: 768px) {
+    body {
+        padding: 20px 10px;
+    }
+
+    section {
+        flex: 1 1 100%;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    
+    .nav-links {
+        position: fixed;
+        top: 70px;
+        right: -100%;
+        flex-direction: column;
+        background: white;
+        width: 70%;
+        height: 100vh;
+        padding: 2rem;
+        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+        transition: right 0.3s ease;
+        gap: 1rem;
+    }
+    
+    .nav-links.active {
+        right: 0;
+    }
+    
+    .mobile-menu-btn {
+        display: block;
+    }
+
+}

@@ -1,0 +1,268 @@
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Bodoni', monospace;
+    font-variant: small-caps;
+}
+
+body {
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+    background-color: darkgreen;
+    color: yellowgreen;
+}
+
+/* Header Section */
+header {
+    background: url('/images/HORSEbg.jpg')center/cover no-repeat;
+    text-align: center;
+    color: rgb(147, 212, 25);
+    padding: 100px 20px;
+    border-radius: 15px;
+}
+
+header h1 {
+    font-size: 2.5em;
+}
+
+
+
+h2 {
+    margin: 20px;
+}
+
+p {
+    font-size: 1.5em;
+}
+
+section {
+    margin: 20px;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: green;
+}
+
+/* images shrink to fit screen right */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/*image flex styling for section about class*/
+.flexy {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+/* coffee cup overlay */
+.image-container {
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    background-color: rgba(0, 120, 32, 0.753);
+    font-size: 2em;
+    padding: 80px;
+    color: yellow;
+}
+
+.image-container:hover .overlay {
+    opacity: 1;
+}
+
+/*styling for grid of 3 images about punnett squares*/
+.container {
+    display: grid;
+    grid-template-rows: repeat(2, 0.5fr);
+    grid-template-columns: repeat(2, 0.5fr);
+    gap: 5px;
+    padding: 5px;
+}
+
+.container.img1 {
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 1;
+    grid-row-end: 1;
+}
+
+.container.img2 {
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 1;
+}
+
+.container.img3 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 2;
+}
+
+
+/*button styles*/
+button {
+    background: rgb(72, 106, 3);
+    text-align: center;
+    font-size: 1.5em;
+    border-radius: 15px;
+    color: yellow;
+    padding: 20px 20px;
+    border: green;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(12, 69, 3, 0.5);
+}
+
+/* form styles */
+form {
+    font-size: 2em;
+}
+
+input {
+    font-size: 1.5em;
+    color: green;
+    background: rgb(147, 212, 25);
+    padding: 5px;
+    border: darkgreen;
+    border-radius: 10px;
+    max-width: 75%;
+}
+
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    border-radius: 15px;
+    background: url('/images/HORSEbg.jpg')center/cover no-repeat;
+    color: rgb(147, 212, 25);
+}
+
+.aboutme {
+    padding: 40px;
+    font-size: 3em;
+}
+
+.aboutbg {
+    background: url('/images/HORSEbg.jpg')center/cover;
+}
+
+/* navbar styles */
+.navbar {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    font-size: 2em;
+    color: #007b00;
+    background-color: rgba(68, 185, 0, 0.9);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    border-radius: 20px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: #007b00;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: darkgreen;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #007b00;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #333;
+}
+
+.stupidbutton {
+    padding: 1rem 2rem;
+    color: #007b00;
+    font-size: 1.5em;
+    background-color: rgba(68, 185, 0, 0.9);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+}
+
+.stupidp {
+    padding: 50px;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 20px 10px;
+    }
+
+    section {
+        flex: 1 1 100%;
+    }
+
+    input {
+        flex: 1 1 100%;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 70px;
+        right: -100%;
+        flex-direction: column;
+        background: white;
+        width: 70%;
+        height: 100vh;
+        padding: 2rem;
+        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+        transition: right 0.3s ease;
+        gap: 1rem;
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .mobile-menu-btn {
+        display: block;
+    }
+
+}
