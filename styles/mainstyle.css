@@ -17,7 +17,7 @@ body {
 
 /* Header Section */
 header {
-    background: url('/images/HORSEbg.jpg')center/cover no-repeat;
+    background: url('images/HORSEbg.jpg')center/cover no-repeat;
     text-align: center;
     color: rgb(147, 212, 25);
     padding: 100px 20px;
