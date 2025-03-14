@@ -160,7 +160,7 @@ footer {
 }
 
 .aboutbg {
-    background: url('/images/HORSEbg.jpg')center/cover;
+    background: url('../images/HORSEbg.jpg')center/cover;
 }
 
 /* navbar styles */
